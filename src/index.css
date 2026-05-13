@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Inter:wght@100;200;300;400;500;600;700&display=swap');
+
+@theme {
+  --font-serif: "Cormorant Garamond", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-gold: #D4AF37;
+  --color-gold-light: #F9E2AF;
+  --color-dark: #0A0A0A;
+  --color-dark-accent: #1A1A1A;
+}
+
+@layer base {
+  body {
+    @apply bg-dark text-white font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+
+  /* Custom Luxury Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0A0A0A;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #D4AF37;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #F9E2AF;
+  }
+
+  h1, h2, h3, h4, h5, h6, .serif {
+    @apply font-serif;
+  }
+}
+
+.luxury-gradient {
+  background: linear-gradient(to bottom, rgba(10, 10, 10, 0) 0%, rgba(10, 10, 10, 0.8) 70%, rgba(10, 10, 10, 1) 100%);
+}
+
+.gold-glow {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+.gold-glow:hover {
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.4);
+}
